@@ -1,0 +1,58 @@
+<!-- Copyright 2017, José Verdú Díaz, All rights reserved.-->
+{% extends 'bustopapp/base.html' %}
+{% block content %}
+<div class="accordion">
+
+  <h3 class="dropdown">v.0.3.4</h3>
+    <div>
+      <p><span class="glyphicon glyphicon-plus-sign"></span>Añadido mensaje de error personalizado al no encontrar una ruta.</p>
+       <p><span class="glyphicon glyphicon-plus-sign"></span>En la sección rutas, cambiadas las etiquetas de los marcadores de "O" y "D" a "1" y "2" para evitar confusión. </p>
+      <p><span class="glyphicon glyphicon-plus-sign"></span>Pequeñas rectificaciones y mejoras en el código. </p>
+    </div>
+
+  <h3 class="dropdown">v.0.3.3</h3>
+    <div>
+      <p><span class="glyphicon glyphicon-ok-sign"></span>En las rutas ya no se muestran los marcadores "A" y "B" al actualizar.</p>
+      <p><span class="glyphicon glyphicon-plus-sign"></span> Pequeñas rectificaciones y mejoras en el código. </p>
+    </div>
+
+  <h3 class="dropdown">v.0.3.2</h3>
+    <div>
+      <p><span class="glyphicon glyphicon-ok-sign"></span> Bug de la función "Rutas" solucionado.</p>
+    </div>
+
+  <h3 class="dropdown">v.0.3.1</h3>
+    <div>
+      <p><span class="glyphicon glyphicon-plus-sign"></span> Ahora en la sección "Rutas" se puede seleccionar un origen/destino personalizado.</p>
+      <p><span class="glyphicon glyphicon-plus-sign"></span> Añadidos iconos en el registro de versiones.</p>
+      <p><span class="glyphicon glyphicon-exclamation-sign"></span> Bug pendiente de solución: Las rutas solo pueden usar posiciones personalizadas si el modo de viaje es en coche.</p>
+    </div>
+
+	<h3 class="dropdown">v.0.3</h3>
+  	<div>
+   		<p><span class="glyphicon glyphicon-plus-sign"></span> Añadida sección Rutas.</p>
+   		<p><span class="glyphicon glyphicon-plus-sign"></span> Añadidas descripciones en la página inicial.</p>
+   		<p><span class="glyphicon glyphicon-plus-sign"></span> Retoque en la sección Líneas.</p>
+  	</div>
+
+	<h3 class="dropdown">v.0.2</h3>
+  	<div>
+   		<p><span class="glyphicon glyphicon-plus-sign"></span> Añadido registro de versiones.</p>
+  	</div>
+
+  	<h3 class="dropdown">v.0.1</h3>
+  	<div>
+    	<p><span class="glyphicon glyphicon-plus-sign"></span> Añadida sección 'Líneas'.</p>
+  	</div>
+  	
+</div>
+
+<script>
+  $( function() {
+    $( ".accordion" ).accordion({
+      collapsible: true
+    });
+  } );
+</script>
+	
+{% endblock %}

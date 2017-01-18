@@ -1,0 +1,9 @@
+<!-- Copyright 2017, José Verdú Díaz, All rights reserved.-->
+{% extends 'bustopapp/base.html' %}
+{% block content %}
+	<h1>Escoja una línea</h1>
+    <form method="POST" class="post-form">{% csrf_token %}
+        						{{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Actualizar</button>
+    </form>
+{% endblock %}

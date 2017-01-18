@@ -1,0 +1,96 @@
+.page-header {
+    background-color: #00ADB5;
+    margin-top: 0;
+    padding: 20px 20px 20px 20px;
+    border-color: #00ADB5;
+    position: relative;
+}
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active, .page-header {
+    color: #EEEEEE;
+    font-size: 60pt;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Paytone One', sans-serif;
+}
+body {
+	background-color: #393E46;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+html{
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#contenedor{
+	background-color: #EEEEEE;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	padding: 30px;
+}
+
+.titulo1{
+	font-weight: bold;
+	font-size: 24px;
+}
+
+.contenido1{
+	padding-left: 30px;
+	border-left-style: solid;
+	border-left-width: 2px;
+}
+
+.contenido1 p{
+	text-indent: 30px;
+	text-align: justify;
+    text-justify: inter-word;
+}
+
+.footer{
+	position: absolute;
+  	right: 0;
+ 	bottom: 0;
+ 	left: 0;
+ 	padding: 1rem;
+  	color:#EEEEEE;
+  	text-align: center;
+}
+
+.menu{
+	float: right;
+}
+
+.version{
+	text-decoration: none;
+    text-align: center;
+}
+
+.espacio{
+	height: 25px
+}
+
+#floating-panel {
+  top: 10px;
+  left: 25%;
+  z-index: 5;
+  background-color: #fff;
+  padding: 5px;
+  border: 1px solid #999;
+  text-align: center;
+  font-family: 'Roboto','sans-serif';
+  line-height: 30px;
+  padding-left: 10px;
+}
+ #map {
+ 	float: right;
+    height: 60%;
+    width: 100%;
+}
+
+.prox{
+  color: #c83349;
+}

@@ -1,0 +1,86 @@
+<!-- Copyright 2017, José Verdú Díaz, All rights reserved.-->
+{% extends 'bustopapp/base2.html' %}
+{% block content %}
+    <div id="floating-panel">
+      <button id="actualizar">Actualizar</button>
+
+      <a href="javascript:void(0);" onclick="comofunciona()">
+        <span class="glyphicon glyphicon-question-sign"></span>
+      </a>
+    </div>
+
+    <div id="map"></div>
+
+    <script type="text/javascript">
+     function initMap() {
+
+        var myLatlng = new google.maps.LatLng(39.569795,2.649515);
+
+        var mapOptions = {
+          zoom: 15,
+          center: myLatlng
+        }
+
+        var directionsService = new google.maps.DirectionsService;
+        var directionsDisplay = new google.maps.DirectionsRenderer({
+          suppressMarkers: true,
+        });
+
+        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+        directionsDisplay.setMap(map);
+
+        var markerO = new google.maps.Marker({
+          position: myLatlng,
+          map: map,
+          draggable:true,
+          title:"Origen",
+          label: '1'
+        });
+
+        var markerD = new google.maps.Marker({
+          position: myLatlng,
+          map: map,
+          draggable:true,
+          title:"Destino",
+          label: '2'
+        });
+
+        var actualizarRutas = function() {
+          calcularYmostrarRuta(directionsService, directionsDisplay);
+        };
+
+        document.getElementById('actualizar').addEventListener('click', actualizarRutas)
+
+      function calcularYmostrarRuta(directionsService, directionsDisplay) {
+        directionsService.route({
+          origin: markerO.getPosition(),
+          destination: markerD.getPosition(),
+          travelMode: google.maps.TravelMode.TRANSIT,
+        }, function(response, status) {
+          if (status === google.maps.DirectionsStatus.OK) {
+            directionsDisplay.setDirections(response);
+          } 
+          else {
+            if (status === google.maps.DirectionsStatus.ZERO_RESULTS) {
+              window.alert('No se han encontrado resultados para la ruta solicitada');
+            }
+            else
+            window.alert('La ruta pedida a fallado debido a ' + status);
+          }
+        });
+      }
+
+    }
+
+    function comofunciona(){
+      alert('Arrastra el marcador de origen (con la letra O) hasta el punto de partida, y el de destino (letra D) hasta el lugar al que se quiere llegar; después haz click en el botón "Actualizar"')
+      };
+
+
+    </script>
+
+    <!--API Key-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAq9Goumq6MLbkX2bGyfeVILW0ZHkWQkXo&callback=initMap"
+        async defer></script>
+{% endblock %}

@@ -1,0 +1,42 @@
+<!-- Copyright 2017, José Verdú Díaz, All rights reserved.-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 50%;
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+
+function initMap() {
+   var myLatLng = {lat: 39.570624, lng: 2.649618};
+
+  var map = new google.maps.Map(document.getElementById('map'), {
+    center: myLatLng,
+    zoom: 15
+  });
+  var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    tittle: 'Yupiii'
+  });
+}
+
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAq9Goumq6MLbkX2bGyfeVILW0ZHkWQkXo&callback=initMap"
+        async defer></script>
+  </body>
+</html>
