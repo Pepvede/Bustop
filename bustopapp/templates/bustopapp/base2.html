@@ -22,50 +22,70 @@
 	</head>
 	<body>
 
-		<div class="page-header row">
-			<div class="col-md-4"></div>
+		<div class="page-header">
+			<div class="row" style="margin-left: 0px; margin-right: 0px;">
 
-			<div class="col-md-4">
-				<h1><a href="/">Bustop</a></h1>
+				<div class="col-md-4 col-md-offset-4">
+					<h1><a href="/">Bustop</a></h1>
+				</div>
+
 			</div>
 
-			<div class="menu col-md-2">
-				<div class="submenu">
-					<a href="{% url 'lineas' %}"><button type="button" class="btn btn-default btn-lg btn-block">
-	  					<span class="glyphicon glyphicon-road" aria-hidden="true"></span> Líneas
-					</button></a>
-				</div>
-				<div class="espacio"></div>
-				<a href="#"><div class="submenu">
-					<button type="button" class="btn btn-default btn-lg btn-block">
-	  					<span class="glyphicon glyphicon-piggy-bank" aria-hidden="true"></span> Tarifas
-					</button></a>
+				<div class="row" style="margin-left: 0px; margin-right: 0px;">
+					<div class="col-md-2 col-md-offset-4">
+						<div>
+							<a href="{% url 'lineas' %}">
+								<button type="button" class="btn btn-default btn-lg btn-block">
+			  						<span class="glyphicon glyphicon-road" aria-hidden="true"></span> 
+			  						Líneas
+								</button>
+							</a>
+						</div>
+
+						<div class="espacio"></div>
+
+						<div>
+							<a href="#">
+								<button type="button" class="btn btn-default btn-lg btn-block">
+			  						<span class="glyphicon glyphicon-piggy-bank" aria-hidden="true"></span> 
+			  						Tarifas
+								</button>
+							</a>
+						</div>
+					</div>
+
+					<div class="col-md-2">
+						<div>
+							<a href="#">
+								<button type="button" class="btn btn-default btn-lg btn-block">
+			  						<span class="glyphicon glyphicon-time" aria-hidden="true"></span> 
+			  						Horarios
+								</button>
+							</a>
+						</div>
+
+						<div class="espacio"></div>
+
+						<div>
+							<a href="{% url 'rutas' %}">
+								<button type="button" class="btn btn-default btn-lg btn-block">
+			  						<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> 
+			  						Rutas
+								</button>
+							</a>
+						</div>
+					</div>
+
 				</div>
 			</div>
-
-			<div class="menu col-md-2">
-				<div class="submenu">
-					<a href="#"><button type="button" class="btn btn-default btn-lg btn-block">
-	  					<span class="glyphicon glyphicon-time" aria-hidden="true"></span> Horarios
-					</button></a>
-				</div>
-				<div class="espacio"></div>
-				<div class="submenu">
-					<a href="{% url 'rutas' %}"><button type="button" class="btn btn-default btn-lg btn-block">
-	  					<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Rutas
-					</button></a>
-				</div>
-			</div>
-
-		</div>
 
 		{% block content %}
         {% endblock %}
 
-		<footer class="footer">
-		<p class="version"><a href="{% url 'versiones' %}">v.0.3.4</a></p>
-		<p>Copyright ©2017, José Verdú Díaz, All rights reserved</p>
-		</footer>
+		<div class="container" style="text-align: center;">
+			<p style="text-decoration: none;"><a href="{% url 'versiones' %}">v.0.3.5</a></p>
+			<p style="color:#EEEEEE;">Copyright ©2017, José Verdú Díaz, All rights reserved</p>
+		</div>
 
 	</body>
 </html>

@@ -1,3 +1,15 @@
+body {
+  background-color: #393E46;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+html{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 .page-header {
     background-color: #00ADB5;
     margin-top: 0;
@@ -6,23 +18,20 @@
     position: relative;
 }
 
-.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active, .page-header {
+.page-header {
     color: #EEEEEE;
     font-size: 60pt;
     text-decoration: none;
     text-align: center;
     font-family: 'Paytone One', sans-serif;
 }
-body {
-	background-color: #393E46;
-	height: 100%;
-	margin: 0;
-	padding: 0;
-}
-html{
-	height: 100%;
-	margin: 0;
-	padding: 0;
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    color: #EEEEEE;
+    font-size: 60pt;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Paytone One', sans-serif;
 }
 
 #contenedor{
@@ -50,25 +59,6 @@ html{
     text-justify: inter-word;
 }
 
-.footer{
-	position: absolute;
-  	right: 0;
- 	bottom: 0;
- 	left: 0;
- 	padding: 1rem;
-  	color:#EEEEEE;
-  	text-align: center;
-}
-
-.menu{
-	float: right;
-}
-
-.version{
-	text-decoration: none;
-    text-align: center;
-}
-
 .espacio{
 	height: 25px
 }
@@ -93,4 +83,51 @@ html{
 
 .prox{
   color: #c83349;
+}
+
+/* Provant */
+
+#map2 {
+        height: 100%;
+        float: left;
+        width: 70%;
+        height: 100%;
+}
+#right-panel {
+  font-family: 'Roboto','sans-serif';
+  line-height: 30px;
+  padding-left: 10px;
+}
+
+#right-panel select, #right-panel input {
+  font-size: 15px;
+}
+
+#right-panel select {
+  width: 100%;
+}
+
+#right-panel i {
+  font-size: 12px;
+}
+
+#right-panel {
+        margin: 20px;
+        border-width: 2px;
+        width: 20%;
+        float: left;
+        text-align: left;
+        padding-top: 20px;
+}
+
+#directions-panel {
+        margin-top: 20px;
+        background-color: #FFEE77;
+        padding: 10px;
+}
+
+/*No provant*/
+.row {
+  margin-right: 0;
+  margin-left: 0;
 }

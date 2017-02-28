@@ -1,7 +1,12 @@
 <!-- Copyright 2017, José Verdú Díaz, All rights reserved.-->
 {% extends 'bustopapp/base.html' %}
 {% block content %}
-<div class="accordion">
+<div id="accordion">
+
+<h3 class="dropdown">v.0.3.5</h3>
+    <div>
+      <p><span class="glyphicon glyphicon-plus-sign"></span>Errores en la estructura de las páginas solucionados</p>
+    </div>
 
   <h3 class="dropdown">v.0.3.4</h3>
     <div>
@@ -49,7 +54,7 @@
 
 <script>
   $( function() {
-    $( ".accordion" ).accordion({
+    $( "#accordion" ).accordion({
       collapsible: true
     });
   } );

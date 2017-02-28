@@ -3,4 +3,4 @@
 # Copyright 2017, José Verdú Díaz, All rights reserved.
 from django.test import TestCase
 
-# Create your tests here.
+# Crear los tests aquí.

@@ -31,28 +31,3 @@ class Parada(models.Model):
 
 	def __str__(self):
 		return self.numero
-'''
-class: define un objeto
-
-Bus: nombre del objeto, debe empezar en mayúsculas siempre
-
-models.Model: especifica que es un modelo de django y que, por tanto,
-			  debe guardarse en la base de datos
-
-x = y establece una propiedad del objeto
-
-y.z() establece el tipo de propiedad
-
-linea: número de la línea de bus
-
-PositiveSmallIntegerField(): número entero desde 0 hasta 32767,
-							 con un número de estas dimensiones se 
-							 evitan conflictos con la base de datos
-
-posiciongps: posicion del bus en coordenadas latitud/longitud
-
-max_digits: número maximo de dígitos
-decimal_places: cantidad de dígitos decimales
-
-def x(): define un "method" del objecto
-'''

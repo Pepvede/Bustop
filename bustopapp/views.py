@@ -6,6 +6,7 @@ from .forms import LineaForm
 from django.http import HttpResponseRedirect
 import googlemaps
 from datetime import datetime
+from models import Linea
 
 
 def main(request):
@@ -16,7 +17,7 @@ def mapa(request):
 	return render(request, 'bustopapp/mapa.html', {})
 
 
-def lineas(request):
+def lineas(request, template="bustopaplineas.html"):
 	if request.method == "POST":
 		form = LineaForm(request.POST)
 		if form.is_valid():
