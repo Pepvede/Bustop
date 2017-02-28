@@ -4,7 +4,6 @@
 from django.shortcuts import render, redirect, reverse
 from .forms import LineaForm
 from django.http import HttpResponseRedirect
-import googlemaps
 from datetime import datetime
 from models import Linea
 
@@ -38,3 +37,6 @@ def versiones(request):
 
 def rutas(request):
 	return render(request, 'bustopapp/rutas.html', {})
+
+def tarifas(request):
+	return render(request, 'bustopapp/tarifas.html', {})

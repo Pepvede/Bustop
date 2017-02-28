@@ -1,0 +1,168 @@
+<!-- Copyright 2017, José Verdú Díaz, All rights reserved.-->
+{% extends 'bustopapp/base.html' %}
+{% block content %}
+<div id="accordion">
+
+  	<h3 class="dropdown">Tarifas Ordinarias</h3>
+  		<div>
+    		<table class="table table-hover table-bordered">
+  				<tr>
+  					<th></th>
+  					<th>Zona urbana</th>
+  					<th>Aeropuerto (Líneas 1 y 21)</th>
+  					<th>Puerto (Línea 1)</th>
+  					<th>Bus de noche (Línea 41)</th>
+  				</tr>
+  				<tr>
+  					<th>Efectivo a bordo</th>
+  					<td>1,50€ Billete sencillo, sin transbordo</td>
+  					<td>5,00€ Billete sencillo, sin transbordo</td>
+  					<td>3,00€ Billete sencillo, sin transbordo</td>
+  					<td>1,50€ Billete sencillo, sin transbordo</td>
+  				</tr>
+  				<tr>
+  					<th>Tarjeta de prepago A</th>
+  					<td>1,50€ Tarjeta 1 viaje, sin transbordo</td>
+  					<td>5,00€ Tarjeta 1 viaje, incluye 1 transbordo*</td>
+  					<td>3,00€ Tarjeta 1 viaje, incluye 1 transbordo*</td>
+  					<td>-</td>
+  				</tr>
+  				<tr>
+  					<th>Tarjeta de prepago B</th>
+  					<td>10,00€ Abono 10 viajes, sin transbordo</td>
+  					<td>8,00€ Tarjeta de ida y vualta, incluye un transbordo*</td>
+  					<td>-</td>
+  					<td>-</td>
+  				</tr>
+			</table>
+
+			<p>*Transbordo gratuito entre líneas, hasta 90 minutos después del primer viaje</p>
+
+			<p><b>Los menores de 5 años viajan gratuitamente acompañados de un adulto con billete</b></p>
+			<p><b>Cambio máximo a bordo: 10€</b></p>
+  		</div>
+
+  		<h3 class="dropdown">Tarifas con Tarjeta Ciudadana</h3>
+  		<div>
+    		<table class="table table-hover table-bordered">
+  				<tr>
+  					<th>Perfil</th>
+  					<th>Zona urbana</th>
+  					<th>Aeropuerto (Líneas 1 y 21)</th>
+  					<th>Puerto (Línea 1)</th>
+  				</tr>
+  				<tr>
+  					<th>Residente</th>
+  					<td>0,80€</td>
+  					<td>1,00€</td>
+  					<td>0,80€</td>
+  				</tr>
+  				<tr>
+  					<th>No residentes</th>
+  					<td>1,15€</td>
+  					<td>5,00€</td>
+  					<td>1,15€</td>
+  				</tr>
+  				<tr>
+  					<th>Estudiantes y universitarios</th>
+  					<td>0,45€</td>
+  					<td>0,67€</td>
+  					<td>0,45€</td>
+  				</tr>
+  				<tr>
+  					<th>Carnet Verde</th>
+  					<td>0,30€</td>
+  					<td>0,67€</td>
+  					<td>0,30€</td>
+  				</tr>
+  				<tr>
+  					<th>Carnet Gran A</th>
+  					<td>Gratuito</td>
+  					<td>0,67€</td>
+  					<td>Gratuito</td>
+  				</tr>
+  				<tr>
+  					<th>Carnet Gran B</th>
+  					<td>0,30€</td>
+  					<td>0,67€</td>
+  					<td>0,30€</td>
+  				</tr>
+  				<tr>
+  					<th>Familia numerosa</th>
+  					<td>0,30€</td>
+  					<td>0,67€</td>
+  					<td>0,30€</td>
+  				</tr>
+  				<tr>
+  					<th>Menores entre 5 y 12 años</th>
+  					<td>Gratuito</td>
+  					<td>0,67€</td>
+  					<td>Gratuito</td>
+  				</tr>
+  				<tr>
+  					<th>Menores entre 13 y 16 años</th>
+  					<td>0,30€</td>
+  					<td>0,67€</td>
+  					<td>0,30€</td>
+  				</tr>
+			</table>
+
+			<p><b>Transbordo gratuito entre líneas, hasta 90 minutos después del primer viaje</b></p>
+  		</div>
+
+  	<h3 class="dropdown">Abonos con Tarjeta Ciudadana</h3>
+  		<div>
+    		<table class="table table-hover table-bordered">
+  				<tr>
+  					<th>Abono</th>
+  					<th>Precio</th>
+  				</tr>
+  				<tr>
+  					<th>Abono 20 viajes durante 30 días (Residente)</th>
+  					<td>13,00€</td>
+  				</tr>
+  				<tr>
+  					<th>Abono 50 viajes durante 30 días (Residente)</th>
+  					<td>29,00€</td>
+  				</tr>
+  				<tr>
+  					<th>Abono viajes ilimitados durante 30 días (Residente)*</th>
+  					<td>37,00€</td>
+  				</tr>
+  				<tr>
+  					<th>Abono viajes ilimitados durante 30 días (Estudiante y universitario)</th>
+  					<td>7,00€</td>
+  				</tr>
+  				<tr>
+  					<th>Abono viajes ilimitados durante 30 días (Carnet Verde)</th>
+  					<td>37,00€</td>
+  				</tr>
+  				<tr>
+  					<th>Abono viajes ilimitados durante 30 días (Carnet Gran B)</th>
+  					<td>7,00€</td>
+  				</tr>
+  				<tr>
+  					<th>Abono viajes ilimitados durante 30 días (Familia numerosa)</th>
+  					<td>10,00€</td>
+  				</tr>
+  				<tr>
+  					<th>Abono viajes ilimitados durante 30 días (Menor entre 13 y 16 años)</th>
+  					<td>7,00€</td>
+  				</tr>
+			</table>
+
+			<p>*Todos los abonos válidos para la zona urbana, menos el "Abono viajes ilimitados durante 30 días (Residente)", válido también para el aeropuerto.</p>
+
+			<p><b>Transbordo gratuito entre líneas, hasta 90 minutos después del primer viaje</b></p>
+  		</div>
+  	
+</div>
+
+<script>
+  $( function() {
+    $( "#accordion" ).accordion({
+      collapsible: true
+    });
+  } );
+</script>
+{% endblock %}

@@ -1,9 +1,5 @@
 <!-- Copyright 2017, José Verdú Díaz, All rights reserved.-->
-{% extends 'bustopapp/base.html' %}
+{% extends 'bustopapp/base2.html' %}
 {% block content %}
-	<h1>Escoja una línea</h1>
-    <form method="POST" class="post-form">{% csrf_token %}
-        						{{ form.as_p }}
-        <button type="submit" class="save btn btn-default">Actualizar</button>
-    </form>
+	<embed src="http://www.emtpalma.es/EMTPalma/Front/imgdb/265791.pdf" width="100%" height="700px" />
 {% endblock %}

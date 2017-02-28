@@ -11,5 +11,6 @@ urlpatterns = [
 	url(r'^lineas/$', views.lineas, name='lineas'),
 	url(r'^lineas/(?P<linea_numero>\w+)/$', views.lineas_detalles, name='lineas_detalles'),
 	url(r'^versiones/$', views.versiones, name='versiones'),
-	url(r'^rutas/$', views.rutas, name='rutas')
+	url(r'^rutas/$', views.rutas, name='rutas'),
+	url(r'^tarifas/$', views.tarifas, name='tarifas')
 ]
