@@ -1,11 +1,12 @@
 import os
-from secret_key import *
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+
+SECRET_KEY = '!!t%matf-)3gd=zspcrfrx5^5=t=mawe7qz#h(l=ko^4&t8n5r'
 
 ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com', 'localhost']
 
@@ -17,7 +18,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'bustopapp',
-    'easy_maps',
 ]
 
 MIDDLEWARE = [

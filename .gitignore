@@ -5,5 +5,3 @@ venv
 db.sqlite3
 /static
 .DS_Store
-bustop/secret_key.py
-bustop/settings.py
