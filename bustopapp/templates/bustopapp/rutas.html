@@ -12,9 +12,11 @@
     <div id="map"></div>
 
     <script type="text/javascript">
-     function initMap() {
+      function initMap() {
 
         var myLatlng = new google.maps.LatLng(39.569795,2.649515);
+        var myLatlng2 = new google.maps.LatLng(39.575878,2.654096);
+        var myLatlng3 = new google.maps.LatLng(39.599606,2.610721);
 
         var mapOptions = {
           zoom: 15,
@@ -31,7 +33,7 @@
         directionsDisplay.setMap(map);
 
         var markerO = new google.maps.Marker({
-          position: myLatlng,
+          position: myLatlng2,
           map: map,
           draggable:true,
           title:"Origen",
@@ -39,7 +41,7 @@
         });
 
         var markerD = new google.maps.Marker({
-          position: myLatlng,
+          position: myLatlng3,
           map: map,
           draggable:true,
           title:"Destino",
@@ -52,35 +54,35 @@
 
         document.getElementById('actualizar').addEventListener('click', actualizarRutas)
 
-      function calcularYmostrarRuta(directionsService, directionsDisplay) {
-        directionsService.route({
-          origin: markerO.getPosition(),
-          destination: markerD.getPosition(),
-          travelMode: google.maps.TravelMode.TRANSIT,
-        }, function(response, status) {
-          if (status === google.maps.DirectionsStatus.OK) {
-            directionsDisplay.setDirections(response);
-          } 
-          else {
-            if (status === google.maps.DirectionsStatus.ZERO_RESULTS) {
-              window.alert('No se han encontrado resultados para la ruta solicitada');
+        window.onload = actualizarRutas
+
+        function calcularYmostrarRuta(directionsService, directionsDisplay) {
+          directionsService.route({
+            origin: markerO.getPosition(),
+            destination: markerD.getPosition(),
+            travelMode: google.maps.TravelMode.TRANSIT,
+          }, function(response, status) {
+            if (status === google.maps.DirectionsStatus.OK) {
+              directionsDisplay.setDirections(response);
+            } 
+            else {
+              if (status === google.maps.DirectionsStatus.ZERO_RESULTS) {
+                window.alert('No se han encontrado resultados para la ruta solicitada');
+              }
+              if (status === google.maps.DirectionsStatus.OVER_QUERY_LIMIT) {
+                window.alert('Bustop está tomando aliento');
+              }
+              else
+              window.alert('La ruta pedida a fallado debido a ' + status);
             }
-            if (status === google.maps.DirectionsStatus.OVER_QUERY_LIMIT) {
-              window.alert('Bustop está tomando aliento');
-            }
-            else
-            window.alert('La ruta pedida a fallado debido a ' + status);
-          }
-        });
+          });
+        }
+
       }
 
-    }
-
-    function comofunciona(){
-      alert('Arrastra el marcador de origen (con el número 1) hasta el punto de partida, y el de destino (número 2) hasta el lugar al que se quiere llegar; después haz click en el botón "Actualizar"')
+      function comofunciona(){
+        alert('Arrastra el marcador de origen (con el número 1) hasta el punto de partida, y el de destino (número 2) hasta el lugar al que se quiere llegar; después haz click en el botón "Actualizar"')
       };
-
-
     </script>
 
     <!--API Key-->
